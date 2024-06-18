@@ -14,10 +14,11 @@ Rails.application.routes.draw do
     
     root "home#homepage"
   
-    get "/home/homepage", to: "home#homepage"
-      get "/home/post", to: "home#singlepost"
-    get "/home/contact", to: "home#contact"
-    get "/home/about", to: "home#about"
+    get "/homepage", to: "home#homepage"
+    get "/post", to: "home#post", as: 'get_post'
+    get "/post/:id", to: "home#post", as: 'select_post'
+    get "/contact", to: "home#contact", as: 'get_contact'
+    get "/about", to: "home#about", as: 'get_about'
     
     
     # get "/blog/testing/:id", to: "home#singlepage", as: blog_test_cat

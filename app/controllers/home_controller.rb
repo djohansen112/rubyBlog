@@ -2,15 +2,21 @@ class HomeController < ApplicationController
     # before_action :set_blog_post, except: [:index, :new, :create]
 
     def index
-      @blog_posts = BlogPost.all
     end
-    
+
+    def homepage
+      @posts = Post.all
+    end
+        
     def home
     end
     
-    def singlepost
+    def post
+      @post = Post.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path
     end
-
+  
     def about
     end
 

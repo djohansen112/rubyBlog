@@ -2,11 +2,11 @@
 <div>
   <%# if authenticated %>
   <% if true %>
-    <%= link_to "Login", home_homepage_path, class:"navbarlink"%>
+    <%= link_to "Login", homepage_path, class:"navbarlink"%>
   <% elsif %>
     <div>
-      <% link_to "New Post", new_blog_post_path, class:"authlink"%>
-      <% link_to "Log out", destroy_user_session_path, class:"authlink"%>
+      <% link_to "New Post", homepage_path, class:"authlink"%>
+      <% link_to "Log out", homepage_path, class:"authlink"%>
     </div>
   <% end %>
   <div class="authburger">
@@ -17,14 +17,14 @@
   <%# if menu is open beacuse of the CSS size of screen %>
   <% if false %>
     <div class="authresponsiveMenu">
-      <%= link_to "Home", home_homepage_path, class: "authlink"%>
-      <%= link_to "Contact", home_contact_path, class: "authlink"%>
-      <%= link_to "About", home_about_path, class: "authlink"%>
+      <%= link_to "Home", homepage_path, class: "authlink"%>
+      <%= link_to "Contact", get_contact_path, class: "authlink"%>
+      <%= link_to "About", get_about_path, class: "authlink"%>
       <%# if not authenticated %>
       <% if false %>
-        <%= link_to "Login", home_homepage_path, class:"authlink"%>
+        <%= link_to "Login", homepage_path, class:"authlink"%>
       <% elsif %>
-        <%= link_to "New Post", new_blog_post_path, class:"authlink"%>
+        <%= link_to "New Post", homepage_path, class:"authlink"%>
         <%= link_to "Log out", destroy_user_session_path, class:"authlink"%>
       <% end %>
     </div>

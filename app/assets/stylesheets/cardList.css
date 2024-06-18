@@ -5,3 +5,55 @@
 .cardlisttitle {
   margin: 50px 0px;
 }
+
+.cardcontainer {
+  margin-bottom: 50px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.cardimageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+
+.cardimage {
+  /* object-fit: cover; */
+  height: 100px;
+  width: 100px;
+}
+
+.cardtextContainer {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.carddate {
+  color: var(--softTextColor);
+}
+
+.cardcategory {
+  font-weight: 500;
+  color: var(--softTextColor);
+}
+.carddesc {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--softTextColor);
+}
+.cardlink {
+  border-bottom: 1px solid crimson;
+  width: max-content;
+  padding: 2px 0px;
+  color: var(--softTextColor);
+}
+
+@media screen and (max-width: 1280px) {
+  .cardimageContainer {
+    display: none;
+  }
+}

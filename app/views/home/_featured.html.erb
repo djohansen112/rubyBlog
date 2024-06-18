@@ -1,23 +1,23 @@
 <%= stylesheet_link_tag "featured" %>
 <div class="featuredcontainer">
   <h1 class="featuredtitle">
-    Quality assurance and more...
+    Latest from the blog...
   </h1>
   <div class="featuredpost">
-    <div class="featuredimgContainer">
-      <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "featuredimage") %>
-    </div>
-    <div class="featuredtextContainer">
-      <h1 class="featuredpostTitle">
-        Lorem ipsum dolor sit!
-      </h1>
-      <p class="featuredpostDesc">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-        debitis praesentium nostrum aliquam doloribus aspernatur? Repudiandae
-        fugiat asperiores laudantium tenetur voluptas hic iste, unde maxime
-        aspernatur, magnam perspiciatis autem at?
-      </p>
-      <%= button_to "Read More", home_post_path, class:"featuredbutton", method: :get %>
+    <% @posts.reverse.first(1).each do |post| %>
+      <div class="featuredimgContainer">
+        <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "featuredimage") %>
+      </div>
+      <div class="featuredtextContainer">
+        <h1 class="featuredpostTitle">
+          <%= link_to post.title, select_post_path(post.id)%>
+        </h1>
+        <p class="featuredpostDesc">
+          <%= truncate(post.content, :length => 1000) %>
+        </p>
+        <%= button_to "Read More", select_post_path(post.id), class:"featuredbutton", method: :get %>
+      </div>
     </div>
   </div>
+<% end %>
 </div>

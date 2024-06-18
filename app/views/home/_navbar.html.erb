@@ -4,12 +4,12 @@
     <%= image_tag("/logo-dark.png", :alt => "Image Placeholder", :class => "navbarimagelogo") %>
   </div>
   <div class="navbarlinks">
-    <%= link_to "Home", home_homepage_path, class:"navbarlink"%>
-    <%= link_to "Contact", home_contact_path, class:"navbarlink"%>
-    <%= link_to "About", home_about_path, class:"navbarlink"%>
+    <%= link_to "Home", homepage_path, class:"navbarlink"%>
+    <%= link_to "Contact", get_contact_path, class:"navbarlink"%>
+    <%= link_to "About", get_about_path, class:"navbarlink"%>
     <%# if not logged in %>
     <% if true%>
-      <%= render partial: "authLinks"%>
+      <%= render partial: "authLinks" %>
       <%# if logged in, then render the authlinks with false (some params thing?) %>
     <% end %>
   </div>

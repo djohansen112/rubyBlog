@@ -2,7 +2,22 @@
 <div class="cardlistcontainer">
   <h1 class="cardlisttitle">Recent Posts</h1>
   <div class="cardlistposts">
-    LIST OF ALL POSTS HERE
+    <% @posts.first(5).each do |post| %>
+      <div class="cardcontainer">
+        <div class="cardimageContainer">
+          <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "cardimage") %>
+        </div>
+        <div class="cardtextContainer">
+          <div class="carddetail">
+            Updated: <span class="carddate"><%=post.created_at%></span><br/>
+            In: <span class="cardcategory"><%=post.authorId%></span>
+          </div>
+          <h1><%= link_to post.title, select_post_path(post.id)%></h1>
+          <p class="carddesc"><%= truncate(post.content, :length => 300)%></p>
+          <%= link_to "Read More...", select_post_path(post.id), class:"cardLink"%>
+        </div>
+      </div>
+    <% end %>
   </div>
   <%= render partial: "pagination" %>
 </div>

@@ -25,17 +25,13 @@
 
 .footerdesc {
   font-weight: 300;
+  margin-bottom: 30px;
 }
 
-.footericons {
-  margin-top: 10px;
-  gap: 10px;
-  display: flex;
-}
 .footerlinks {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 100px;
 }
 

@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "singlePage" %>
+<div class="singlepagecontainer">
+  <div class="singlepageinfoContainer">
+    <div class="singlepagetextContainer">
+      <h1 class="singlepagetitle">
+        <%= @post.title %>
+      </h1>
+      <div class="singlepageuser">
+        <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => ("singlepageuserImageContainer singlepageavatar")) %>
+        <div class="singlepageuserTextContainer">
+          <span class="singlepageusername"><%= @post.authorId %></span>
+          <span class="singlepagedate"><%= @post.updated_at %></span>
+        </div>
+      </div>
+    </div>
+    <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => ("singlepageimageContainer singlepageimage")) %>
+  </div>
+  <div class="singlepagecontent">
+    <div class="singlepagepost">
+      <div class="singlepagedescription">
+        <p>
+          <%= @post.content %>
+        </p>
+      </div>
+      <%= render partial: "comments", :class => "singlepagecomments", :locals => {:postId => @post.id} %>
+    </div>
+    <%= render partial: "menu" %>
+  </div>
+</div>

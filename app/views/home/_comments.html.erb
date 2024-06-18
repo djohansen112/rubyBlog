@@ -5,12 +5,13 @@
   <% if true %>
     <div class="commentswrite">
       <textarea placeholder="leave a comment..." class="commentsinput"></textarea>
-      <%= button_to "Submit", home_homepage_path, :class => "commentsbutton", method: :get %>
+      <%= button_to "Submit", homepage_path, :class => "commentsbutton", method: :get %>
     </div>
   <%elsif%>
     <%= button_to "Login to leave a comment", new_user_session_path, :class => "commentsbutton" %>
   <% end %>
   <div class="commentscomments">
+    <%= @post.id %>
     <div class="commentscomment">
       <div class="commentsuser">
         <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "commentsuserImage", :style => 'width: 50px; height: 50px;') %>
@@ -20,10 +21,7 @@
         </div>
       </div>
       <p class="commentsdesc">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem saepe
-        ea praesentium eligendi omnis vel quas corporis voluptatum
-        consectetur quia repellendus repudiandae, quasi pariatur dolore,
-        voluptatem adipisci. Quos, inventore veniam?
+        <%= postId %>
       </p>
     </div>
   </div>

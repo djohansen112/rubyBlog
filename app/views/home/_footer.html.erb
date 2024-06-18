@@ -6,39 +6,22 @@
       <h1 class="footerlogoText">...not a feature</h1>
     </div>
     <p class="footerdesc">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-      corporis vero, minus repellat officiis blanditiis minima explicabo, in
-      quia laudantium ipsam! Accusamus, voluptatem quasi? Eveniet
-      voluptatibus laudantium quasi modi minus.
+      Built with <%= link_to "Ruby on Rails", "https://rubyonrails.org/", style: "color: crimson;"%>, this blog is my way of putting pen to paper and organising my knowledge in some kind of way that I can share with others. I hope you find something you like here, and would encourage you to get in contact if you'd like to contribute!
     </p>
-    <div class="footericons">
-      <%= image_tag("/facebook.png", :alt => "facebook", :style => "width: 24px; height: 24px") %>
-      <%= image_tag("/instagram.png", :alt => "instagram", :style => "width: 24px; height: 24px") %>
-      <%= image_tag("/tiktok.png", :alt => "tiktok", :style => "width: 24px; height: 24px") %>
-      <%= image_tag("/youtube.png", :alt => "youtube", :style => "width: 24px; height: 24px") %>
-    </div>
   </div>
   <div class="footerlinks">
     <div class="footerlist">
       <span class="footerlistTitle">Links</span>
-      <a href="/">Homepage</a>
-      <a href="/">Blog</a>
-      <a href="/">Contact</a>
-      <a href="/">About</a>
+      <%= link_to "Home",     homepage_path       %>
+      <%= link_to "Contact",  get_contact_path    %>
+      <%= link_to "About",    get_about_path      %>
     </div>
     <div class="footerlist">
-      <span class="footerlistTitle">Tags</span>
+      <span class="footerlistTitle">Categories</span>
       <a href="/">Testing</a>
       <a href="/">Development</a>
       <a href="/">Category 1</a>
       <a href="/">Category 2</a>
-    </div>
-    <div class="footerlist">
-      <span class="footerlistTitle">Social</span>
-      <a href="/">Facebook</a>
-      <a href="/">Instagram</a>
-      <a href="/">TikTok</a>
-      <a href="/">Youtube</a>
     </div>
   </div>
 </div>
