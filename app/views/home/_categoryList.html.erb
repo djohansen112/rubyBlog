@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "categoryList" %>
+<div class="categorylistcontainer">
+  <h1 class="categorylisttitle">Popular Categories</h1>
+  <div class="categorylistcategories">
+    <%# render all the categories in the db with their image and when clicked open the category filtered page%>
+    <div class="categorylistcategory categorylisttesting"> CATEGORY 1 <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "categorylistimage", :style => "width: 100px; height: 100px") %> </div>
+    <div class="categorylistcategory categorylistdevelopment"> CATEGORY 2 <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "categorylistimage", :style => "width: 100px; height: 100px") %> </div>
+    <div class="categorylistcategory categorylistcategory1"> CATEGORY 3 <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "categorylistimage", :style => "width: 100px; height: 100px") %> </div>
+    <div class="categorylistcategory categorylistcategory2"> CATEGORY 4 <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "categorylistimage", :style => "width: 100px; height: 100px") %> </div>
+  </div>
+</div>

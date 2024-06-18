@@ -1,0 +1,44 @@
+.authlink {
+  cursor: pointer;
+}
+
+.authburger {
+  width: 20px;
+  height: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.authline {
+  width: 100%;
+  height: 2px;
+  background-color: var(--softTextColor);
+}
+.authresponsiveMenu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: var(--bg);
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 640px) {
+  .authburger {
+    display: flex;
+  }
+  .authlinks {
+    justify-content: flex-end;
+  }
+  .authlink {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+<%# 
+  if (status === "authenticated") {
+    router.push("/");
+  } %>
+<%= stylesheet_link_tag "editorpage" %>
+<div class="editorcontainer">
+  <input type="text" placeholder="Title" class="editorinput" />
+  <div class="editoreditor">
+    <%# onClick={() => setOpen(!open)} %>
+    <button class="editorbutton" >
+      <%= image_tag("/sun.png", :alt => "Image Placeholder", :style => "width: 16px; height: 16px;") %>
+    </button>
+    <%# {open && ( %>
+    <div class="editoradd">
+      <button class="editoraddButton">
+        <%= image_tag("/sun.png", :alt => "Image Placeholder", :style => "width: 16px; height: 16px;") %>
+      </button>
+      <button class="editoraddButton">
+        <%= image_tag("/sun.png", :alt => "Image Placeholder", :style => "width: 16px; height: 16px;") %>
+      </button>
+      <button class="editoraddButton">
+        <%= image_tag("/sun.png", :alt => "Image Placeholder", :style => "width: 16px; height: 16px;") %>
+      </button>
+    </div>
+    <%# )} %>
+    INSERT ACTION TEXT BOX HERE
+  </div>
+  <button class="editorpublish">Publish</button>
+</div>

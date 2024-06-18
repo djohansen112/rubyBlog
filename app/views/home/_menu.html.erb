@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "menu" %>
+<div class="menucontainer">
+  <h2 class="menusubtitle">What's hot?</h2>
+  <h1 class="menutitle">Most popular</h1>
+  <%= render partial:  "menuPosts" %><%# <MenuPosts withImage="{false}" /> %>
+  <h2 class="menusubtitle">Discover by topic</h2>
+  <h1 class="menutitle">Categories</h1>
+  <%= render partial:  "menuCategories" %><%# <MenuCategories /> %>
+  <h2 class="menusubtitle">Chosen by the editor</h2>
+  <h1 class="menutitle">Editor's Picks</h1>
+  <%= render partial:  "menuPosts" %><%# <MenuPosts withImage="{true}" /> %>
+</div>

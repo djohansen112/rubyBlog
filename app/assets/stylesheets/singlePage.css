@@ -1,0 +1,92 @@
+.singlepagecontainer {
+}
+
+.singlepageinfoContainer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.singlepagetextContainer {
+  flex: 1;
+}
+
+.singlepagetitle {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.singlepageuser {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.singlepageuserImageContainer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.singlepageavatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.singlepageuserTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--softTextColor);
+}
+.singlepageusername {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.singlepageimageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+.singlepageimage {
+  object-fit: contain;
+}
+
+.singlepagecontent {
+  display: flex;
+  gap: 50px;
+}
+.singlepagepost {
+  flex: 5;
+  margin-top: 60px;
+}
+
+.singlepagedescription p {
+  font-size: 20px;
+  font-weight: 200;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1536px) {
+  .singlepagetitle {
+    font-size: 54px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .singlepagetitle {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .singlepageimageContainer {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .singlepagetitle {
+    font-size: 36px;
+  }
+  .singlepagedescription p {
+    font-size: 18px;
+  }
+}

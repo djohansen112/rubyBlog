@@ -1,0 +1,9 @@
+.homecontent {
+  display: flex;
+  gap: 50px;
+}
+.homecontainer {
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: #ddd;
+}

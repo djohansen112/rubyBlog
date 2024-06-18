@@ -1,0 +1,62 @@
+.editorcontainer {
+}
+
+.editoreditor {
+  display: flex;
+  gap: 20px;
+  height: 700px;
+}
+.editorbutton,
+.editoraddButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--textColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.editoraddButton {
+  border-color: green;
+}
+
+.editoradd {
+  display: flex;
+  gap: 20px;
+  background-color: var(--bg);
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  left: 50px;
+}
+.editorinput {
+  padding: 50px;
+  font-size: 64px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.editorinput::placeholder {
+  color: gray;
+}
+.editortextArea {
+  width: 100%;
+}
+
+.editorpublish {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}

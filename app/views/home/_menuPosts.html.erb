@@ -1,0 +1,84 @@
+<%= stylesheet_link_tag "menuPosts" %>
+<div class="menupostsitems">
+  <a href="/" class="menupostsitem">
+    <%# {withImage && ( %>
+    <div class="menupostsimageContainer">
+      <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "menupostsimage", :style => "height: 64px; width: 64px;") %>
+    </div>
+    <%# end with image check %>
+    <div class="menupoststextContainer">
+      <span class="menupostscategory menupoststesting">
+        Testing
+      </span>
+      <h3 class="menupostspostTitle">
+        Lorem ipsum dolor sit amet consectetur
+      </h3>
+      <div class="menupostsdetail">
+        <div class="menupostsusername">User name</div>
+        <div class="menupostsdate">Date</div>
+      </div>
+    </div>
+    <%# </a>{" "} %>
+    <a href="/" class="menupostsitem">
+      <%# {withImage && (
+<div class="menupostsimageContainer">
+   <Image src="/p1.jpeg" alt="" fill class="menupostsimage" /> 
+</div>
+)} %>
+      <div class="menupostsimageContainer">
+        <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "menupostsimage", :style => "height: 64px; width: 64px;") %>
+      </div>
+      <div class="menupoststextContainer">
+        <span class="menupostscategory menupostsdevelopment">
+          Development
+        </span>
+        <h3 class="menupostspostTitle">
+          Lorem ipsum dolor sit amet consectetur
+        </h3>
+        <div class="menupostsdetail">
+          <div class="menupostsusername">User name</div>
+          <div class="menupostsdate">Date</div>
+        </div>
+      </div>
+    </a>
+    <a href="/" class="menupostsitem">
+      <%# if theres an image %>
+      <%# <% if true %>
+      <div class="menupostsimageContainer">
+        <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "menupostsimage", :style => "height: 64px; width: 64px;") %>
+      </div>
+      <%# <% end%>
+      <div class="menupoststextContainer">
+        <span class="menupostscategory menupostscategory1">
+          Category 1
+        </span>
+        <h3 class="menupostspostTitle">
+          Lorem ipsum dolor sit amet consectetur
+        </h3>
+        <div class="menupostsdetail">
+          <div class="menupostsusername">User name</div>
+          <div class="menupostsdate">Date</div>
+        </div>
+      </div>
+    </a>
+    <a href="/" class="menupostsitem">
+      <%# if theres an image %>
+      <%# <% if true %>
+      <div class="menupostsimageContainer">
+        <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "menupostsimage", :style => "height: 64px; width: 64px;") %>
+      </div>
+      <%# <% end%>
+      <div class="menupoststextContainer">
+        <span class="menupostscategory menupostscategory2">
+          Category 2
+        </span>
+        <h3 class="menupostspostTitle">
+          Lorem ipsum dolor sit amet consectetur
+        </h3>
+        <div class="menupostsdetail">
+          <div class="menupostsusername">User name</div>
+          <div class="menupostsdate">Date</div>
+        </div>
+      </div>
+    </a>
+  </div>

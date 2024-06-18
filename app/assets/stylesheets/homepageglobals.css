@@ -1,15 +1,18 @@
-:root {
-  --bg: #0f172a;
-  --textColor: #ddd;
-  --softBg: #01f273a;
-  --softTextColor: #a6a6a6;
-}
+/* GLOBALS */
+/*LIGHT MODE STANDARD VARS*/
+/* :root {
+  --bg: white;
+  --textColor: black;
+  --softBg: .f0f0f0;
+  --softTextColor: .626262;
+} */
+/* END LIGHT MODE STANDARD VARS*/
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blue;
 }
 
 body {
@@ -22,13 +25,22 @@ a {
   text-decoration: none;
 }
 
-.applicationcontainer {
+/*DARK MODE VARIABLES*/
+.dark {
+  --bg: 0f172a;
+  --textColor: .ddd;
+  --softBg: 0.1f273a;
+  --softTextColor: .a6a6a6;
+}
+/*END DARK MODE VARS*/
+
+.container {
   min-height: 100vh;
-  background-color: #0f172a;
-  color: #ddd;
+  background-color: var(--bg);
+  color: var(--textColor);
 }
 
-.applicationwrapper {
+.wrapper {
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
@@ -36,8 +48,10 @@ a {
   padding-right: 80px;
 }
 
+/* END GLOBALS*/
+
 /* RESPONSIVE SCREEN LIMITS: */
-/* @media screen and (max-width: 1536px) {
+@media screen and (max-width: 1536px) {
   .wrapper {
     max-width: 1366px;
   }
@@ -67,5 +81,13 @@ a {
   .wrapper {
     max-width: 475px;
   }
-} */
+}
 /* END REPSONSIVE SCREEN LIMITS*/
+
+.ql-container {
+  font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: gray;
+}

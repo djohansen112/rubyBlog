@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag "comments" %>
+<div class="commentscontainer">
+  <h1 class="commentstitle">Comments</h1>
+  <%# if status === "authenticated" %>
+  <% if true %>
+    <div class="commentswrite">
+      <textarea placeholder="leave a comment..." class="commentsinput"></textarea>
+      <%= button_to "Submit", home_homepage_path, :class => "commentsbutton", method: :get %>
+    </div>
+  <%elsif%>
+    <%= button_to "Login to leave a comment", new_user_session_path, :class => "commentsbutton" %>
+  <% end %>
+  <div class="commentscomments">
+    <div class="commentscomment">
+      <div class="commentsuser">
+        <%= image_tag("/p1.jpeg", :alt => "Image Placeholder", :class => "commentsuserImage", :style => 'width: 50px; height: 50px;') %>
+        <div class="commentsuserInfo">
+          <span class="commentsusername">Commenter</span>
+          <span class="commentsdate">Date of comment</span>
+        </div>
+      </div>
+      <p class="commentsdesc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem saepe
+        ea praesentium eligendi omnis vel quas corporis voluptatum
+        consectetur quia repellendus repudiandae, quasi pariatur dolore,
+        voluptatem adipisci. Quos, inventore veniam?
+      </p>
+    </div>
+  </div>
+</div>
